@@ -1,31 +1,42 @@
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../fonts/poppins/Poppins-SemiBold.ttf");
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    position: relative; /* Add position relative to allow absolute positioning of pseudo-element */
-    background-image: url('../img/4.jpg'); /* Specify the URL of your background image */
+    font-family: "Poppins-Regular";
+    position: relative;
+    background-image: url('../img/3.jpg');
     background-size: cover;
 }
 
 body::after {
-    content: ''; /* Create pseudo-element */
-    opacity: 0.5; /* Adjust the opacity of the overlay */
-    position: absolute;
+    content: '';
+    opacity: 0.5;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: -1; /* Send pseudo-element to the background */
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent blue background */
+    background-color: rgba(0, 0, 0, 0.1);
     padding: 10px 0;
 }
 
 nav {
     display: flex;
-    justify-content: space-between; /* Spread the items across the navbar */
+    justify-content: space-between;
     align-items: center;
     padding: 0 50px;
 }
@@ -36,7 +47,7 @@ nav {
 }
 
 .logo {
-    margin-left: 20px; /* Add margin to push the logo to the left */
+    margin-left: 20px;
 }
 
 .nav-links {
@@ -57,38 +68,37 @@ nav {
 
 .nav-links li a:hover {
     color: #e6e6e6;
-    transform: scale(1.1); /* Zoom effect */
-    transition: transform 0.3s ease; /* Smooth transition */
-    position: relative; /* Create space for the underline */
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    position: relative;
 }
 
 .nav-links li a:hover::after {
-    content: ''; /* Add pseudo-element for the underline */
+    content: '';
     position: absolute;
     left: 0;
-    bottom: -5px; /* Adjust the position of the underline */
+    bottom: -5px;
     width: 100%;
-    height: 2px; /* Thickness of the underline */
-    background-color: black; /* Green underline color */
+    height: 2px;
+    background-color: black;
 }
-
 
 .cards {
     display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap to the next line */
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     margin-top: 50px;
 }
 
 .card {
     background-color: #fff;
     width: 300px;
-    padding: 20px;
-    margin: 0 20px 20px 20px; /* Adjusted to add margin at the bottom */
+    padding: 30px;
+    margin-bottom: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
@@ -97,18 +107,24 @@ nav {
 }
 
 .card button {
-    margin-top: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 8px 16px;
+    margin-top: 15px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .card button:hover {
     background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .logout-btn {
@@ -127,55 +143,17 @@ nav {
 .logout-btn:hover {
     background-color: #d32f2f;
 }
-/* Footer styles */
-/* Footer styles */
-/* Footer styles */
-/* Footer styles */
+
 footer {
-    background-color: black; /* Dark background color */
-    color: #fff; /* White text color */
-    padding: 20px 0;
+    color: #fff;
     text-align: center;
     position: fixed;
     bottom: 0;
     width: 100%;
-    transition: background-color 0.3s ease; /* Smooth color transition */
 }
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-left, .footer-right {
-    flex: 1;
-}
-
-.footer-right ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.footer-right ul li {
-    margin-right: 20px;
-}
-
-.footer-right ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-right ul li a:hover {
-    color: #00bcd4; /* Hover color */
-    text-decoration: underline;
-}
-
 .footer-copyright {
-    color: #ccc; /* Light gray text color */
+    margin-top: 50px;
+    color: #ccc;
     font-size: 14px;
     position: absolute;
     bottom: 10px;
@@ -183,3 +161,6 @@ footer {
     transform: translateX(-50%);
 }
 
+h3 {
+    text-align: center;
+}
