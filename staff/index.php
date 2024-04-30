@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +30,7 @@
         <div class="card">
             <h3>View citizen Data</h3>
             <p>Track the progress of submitted requests or inquiries from citizens and view relevant data. Stay updated on the status of applications or concerns and respond promptly to citizen needs.</p>
-            <button onclick="location.href='data-view.php'">View</button>
+            <button onclick="location.href='view-data.php'">View</button>
         </div>
         <div class="card">
             <h3>Provide response</h3>
