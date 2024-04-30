@@ -36,11 +36,6 @@
             <p>Identify the dedicated officer assigned to handle your requests or queries. Get to know the contact details and status updates from the officer responsible for addressing your specific needs or issues.</p>
             <button onclick="location.href='officer-ass.php'">View</button>
         </div>
-        <div class="card">
-            <h3>Request for another Officer</h3>
-            <p>If you require assistance beyond the assigned officer or need specialized support, easily request for another officer to address your concerns. Ensure your needs are met efficiently by accessing the appropriate expertise.</p>
-            <button onclick="location.href='request-officer.php'">Request</button>
-        </div>
     </section>
 
     <button class="logout-btn" onclick="logout()">Logout</button>
